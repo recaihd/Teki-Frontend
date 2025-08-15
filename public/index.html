@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Teki - Chat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>💬 Teki</h1>
+  </header>
+
+  <!-- Tela de login -->
+  <div id="login-screen">
+    <p>Faça login para entrar no Teki:</p>
+    <button id="login-btn">Login com Google</button>
+  </div>
+
+  <!-- Tela para escolher username -->
+  <div id="username-screen" class="hidden">
+    <h2>Escolha seu username</h2>
+    <input id="username-input" type="text" placeholder="Digite seu username">
+    <p id="username-error" class="error"></p>
+    <button id="save-username-btn">Salvar</button>
+  </div>
+
+  <!-- Tela do chat -->
+  <div id="chat-screen" class="hidden">
+    <h2>Bem-vindo, <span id="user-label"></span>!</h2>
+    <div id="messages"></div>
+    <input id="message-input" type="text" placeholder="Digite sua mensagem...">
+    <button id="send-btn">Enviar</button>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
